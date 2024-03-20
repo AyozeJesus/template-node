@@ -1,12 +1,8 @@
-# MeeMee API
-
-## Description
-
-The MeeMee API serves as the backend for an application for a meetup organizing platform called MeeMee. The API also integrates with a MySQL database to store and retrieve data related to events.
+# Template API
 
 ## Database Configuration
 
-The MeeMee API uses MySQL as a database to store information about events and users. Ensure you follow these steps to set up the database correctly:
+The API uses MySQL as a database to store information about events and users. Ensure you follow these steps to set up the database correctly:
 
 1. Install MySQL: If you don't have MySQL installed, you can download it from [@the official website](https://www.mysql.com/downloads/).
 
@@ -16,7 +12,7 @@ The MeeMee API uses MySQL as a database to store information about events and us
 
 Ensure that the .env file in the root of your project contains the correct configuration for MySQL. It should have variables like DB_PORT and JWT SECRET (there's a .env.example file).
 
-4. MySQL Client in the API: The MeeMee API uses a module called MySQLClient.js to manage the database connection. Make sure this file is configured to use the environment variables from the .env file and the values defined in config.js:
+4. MySQL Client in the API: The API uses a module called MySQLClient.js to manage the database connection. Make sure this file is configured to use the environment variables from the .env file and the values defined in config.js:
 
 - `address` should be "localhost" or the address of your MySQL database.
 - `user` should be "demo" or the user of your MySQL database.
@@ -35,7 +31,7 @@ This command initializes tables in the database using Node.js. When you run this
 
 ## Run the API
 
-To run the MeeMee API, follow these steps:
+To run the API, follow these steps:
 
 1. Install Dependencies: Open a terminal in the root of your project and run the following command to install dependencies:
 
@@ -60,20 +56,6 @@ The API should be listening on a specific port. You can access it through the ro
 - `POST /user/login`: Logs in to the platform.
 
 - `GET /user/:id`: Gets information about a user by their ID.
-
-### Events
-
-- `POST /meetups`: Creates a new meetup.
-
-- `GET /meetups`: Gets a list of all meetups.
-
-- `GET /meetup/:id`: Gets details of a meetup by its ID.
-
-- `PUT /meetup/:id`: Updates any parameter of a meetup by its ID.
-
-- `DELETE /meetup/:id`: Deletes a meetup by its ID.
-
-- `PUT /meetups/:id/updateAttendeesCount`: Updates the attendance counter of a meetup by its ID.
 
 ## Run Tests
 
